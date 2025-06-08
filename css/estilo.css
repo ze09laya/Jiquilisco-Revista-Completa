@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: linear-gradient(to right, hsla(200, 100%, 17%, 0.664), hsla(200, 100%, 17%, 0.664)), url(../imagenes/GUANACOS-BAHIA-DE-JIQUILISCO.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  padding: 40px 0;
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #0b2e59;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fffafa;
+}
+
+.textos-header {
+  text-align: center;
+  margin-top: 20px;
+  padding: 40px 20px;
+}
+
+.textos-header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.textos-header h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  height: 100px;
+}
+
+.wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sobre-nosotros {
+  padding: 60px 0;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #0b2e59;
+}
+
+.contenedor-sobre-nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.imagen-about-us {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contenido-textos {
+  flex: 2;
+}
+
+.contenido-textos h3 {
+  margin-bottom: 10px;
+  color: #1e3c72;
+}
+
+.contenido-textos p {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #444;
+}
+
+.historia,
+.contacto {
+  padding: 60px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  width: 150px;
+  padding: 10px;
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #2a5298;
+}
+
+footer {
+  background-color: #0b2e59;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.btn-ir-arriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #1e3c72;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  display: none;
+  z-index: 100;
+}
+
+/* ESTILO DE LAS TARJETAS */
+
+.title-cards {
+  text-align: center;
+  margin: 60px 0 30px 0;
+   color: #0b2e59;
+     font-size: 20px;
+}
+
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #0b2e59;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card figure {
+  margin: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.contenido-card {
+  padding: 20px;
+  text-align: center;
+}
+
+.contenido-card h3 {
+  margin-bottom: 10px;
+  color: #1e3c72;
+}
+
+.contenido-card p {
+  font-size: 0.95em;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.contenido-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1e3c72;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.contenido-card a:hover {
+  background-color: #2a5298;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 56.25em) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+
+  .publicaciones,
+  .barralateral {
+    width: 100%;
+  }
+
+  .side-post {
+    width: 42%;
+    float: left;
+    margin: -2% 0 1% 1.6%;
+  }
+}
+
+@media screen and (max-width: 42.813em) {
+  .side-post {
+    width: auto;
+    padding: 15px;
+    margin: -2% auto 8% auto;
+  }
+
+  .blog-title {
+    font-size: 1.95em;
+  }
+
+  .date {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  nav ul {
+    max-height: 0;
+  }
+
+  .reveal {
+    max-height: 19em;
+  }
+
+  nav ul .nav-item {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 23.75em) {
+  .blog-content,
+  .post-link {
+    font-size: 0.9em;
+  }
+
+  .side-content {
+    font-size: 0.8em;
+  }
+
+  .button {
+    padding: 10px 15px;
+  }
+
+  .nav-item {
+    font-size: 1.2em;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  justify-content: space-between;
+}
+
+.section {
+  flex: 3;
+}
+
+.col.publicaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog-post {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #1e3c72;
+}
+
+.blog-title {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2em;
+  color: #1e3c72;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.blog-post img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.blog-content {
+  font-size: 1em;
+  color: #444;
+  line-height: 1.6;
+}
+
+aside.col.barralateral {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-post {
+  background-color: #f0f4fa;
+  padding: 15px;
+  border-left: 4px solid #1e3c72;
+  border-radius: 5px;
+}
+
+.side-post img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1e3c72;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2a5298;
+}
+
+.historia p {
+  text-align: justify;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.contacto-contenido {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.formulario {
+  flex: 1;
+  min-width: 300px;
+}
+
+.imagen-movimiento {
+  flex: 1;
+  text-align: center;
+}
+
+.imagen-movimiento img {
+  width: 300px;
+  animation: mover 3s infinite alternate;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+.galeria {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.imagenes {
+  width: 20%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+.imagenes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.encima {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 73, 94, 0.815);
+}
+.encima h2 {
+  position: relative;
+  top: 45%;
+  text-align: center;
+  color: #fff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.grupal {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grupal img {
+  max-width: 150%;
+  max-height: 150%;
+  object-fit: contain;
+  z-index: 1;
+  position: relative;
+}
+
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(52, 73, 94, 0.5);
+  z-index: 2;
+  pointer-events: none;
+}
+

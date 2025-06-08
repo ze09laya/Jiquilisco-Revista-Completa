@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body {
+    background: #ffffff;
+    font-size: 13pt;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#imagenlogo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: url(../imagenes/logo.png) no-repeat left center;
+    background-size: contain;
+    padding-left: 100px;
+    height: 80px;
+    width: 100%;
+}
+
+#imagenlogo h1 a {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #1e3c72;
+    text-decoration: none;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+#subtitulo {
+    font-size: 1.2em;
+    color: #1e3c72;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.navegacion {
+    width: 100%;
+    background: #1e3c72;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    display: inline-block;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #fdfcfc;
+    font-size: 12pt;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #ffffff;
+    transition: all .3s;
+}
+
+#seccion {
+    width: 100%;
+    max-width: 1150px;
+    padding: 20px 40px;
+    background: #FFF;
+    margin: auto;
+}
+
+#imagen {
+    margin-top: 0em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+    height: 250px;
+    text-align: center;
+}
+
+#subtitulo2 {
+    font-size: 1.6em;
+    color: #030303;
+    margin-bottom: 1em;
+}
+
+p, .blog-content {
+    margin-bottom: 1.2em;
+    font-size: 13pt;
+    color: black;
+    line-height: 1.6;
+}
+
+a {
+    font-size: 13pt;
+}
+
+footer {
+    width: 100%;
+    background: #1e3c72;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+#footer p, #piepagina {
+    font-size: 12pt;
+    color: white;
+}
+
+/* Tarjetas */
+.container-card {
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f6fafa;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    transition: all 400ms ease-out;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(224, 18, 87, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* Blog layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    flex: 3;
+}
+
+.col.publicaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-post {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+    font-size: 1.6em;
+    color: #1e3c72;
+}
+
+.date {
+    font-size: 1em;
+    color: #777;
+    margin-top: 0.3em;
+    margin-bottom: 0.8em;
+}
+
+.blog-post img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+aside.col.barralateral {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-post {
+    background-color: #f0f4fa;
+    padding: 15px;
+    border-left: 4px solid #1e3c72;
+    border-radius: 5px;
+}
+
+.side-post img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.side-post p {
+    font-size: 12pt;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1e3c72;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2a5298;
+}
+
+/* Responsive para celulares */
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    #imagenlogo {
+        flex-direction: column;
+        padding-left: 0;
+        height: auto;
+        background: none;
+        text-align: center;
+    }
+
+    #imagenlogo h1 a, #subtitulo {
+        margin: 0;
+        white-space: normal;
+    }
+
+    .navegacion ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #seccion {
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .section, aside.col.barralateral {
+        width: 100%;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    #imagen {
+        margin-left: 0;
+    }
+}
+
+h4 {
+      color: #1e3c72; 
+    }
+
+

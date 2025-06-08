@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cuerpo */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #fdfeff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-bienvenidos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.bienvenidos {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3c72;
+}
+
+.inicio-link {
+  font-size: 1.2rem;
+  color: #1e3c72;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 2px solid #1e3c72;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.inicio-link:hover {
+  background-color: #1e3c72;
+  color: white;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Sección de publicaciones */
+.section {
+  flex: 3;
+}
+
+.col.publicaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog-post {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+  font-size: 1.6em;
+  color: #1e3c72;
+}
+
+.date {
+  font-size: 1em;
+  color: #777;
+  margin-top: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+/* Barra lateral */
+aside.col.barralateral {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-post {
+  background-color: #f0f4fa;
+  padding: 15px;
+  border-left: 4px solid #1e3c72;
+  border-radius: 5px;
+}
+
+.side-post img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.side-post p {
+  font-size: 12pt;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #1e3c72;
+  color: #fff;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .section,
+  aside.col.barralateral {
+    flex: 1 1 100%;
+  }
+
+  .inicio-link {
+    font-size: 1.2rem;
+  }
+}
